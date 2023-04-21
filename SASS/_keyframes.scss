@@ -1,0 +1,93 @@
+@keyframes logo-letter-1-1 {
+  to {
+    translate: -45% -55%;
+  }
+}
+
+@keyframes logo-letter-1-2 {
+  to {
+    translate: -55% -45%;
+  }
+}
+
+@keyframes logo-letter-2 {
+  to {
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+@keyframes logo-letter-3 {
+  from {
+    rotate: -3deg;
+  }
+  to {
+    rotate: 3deg;
+  }
+}
+
+@keyframes logo-letter-4 {
+  from {
+    scale: 1.05;
+  }
+  to {
+    scale: 0.95;
+  }
+}
+
+@keyframes logo-letter-6 {
+  to {
+    clip-path: polygon(0 0, 30% 0, 30% 70%, 85% 70%, 85% 100%, 0 100%);
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 0.5deg;
+  }
+  50% {
+    rotate: -0.5deg;
+  }
+  100% {
+    rotate: 0.5deg;
+  }
+}
+
+@keyframes shake-hard {
+  0% {
+    translate: 0 2px;
+    rotate: 5deg;
+  }
+  100% {
+    translate: 0 -2px;
+    rotate: -5deg;
+  }
+}
+
+@keyframes shake-horizantal {
+  0% {
+    scale: 1.1;
+    translate: -2px;
+  }
+  20% {
+    scale: 0.9;
+    translate: -2px;
+  }
+  40% {
+    scale: 1.1;
+    translate: 2px;
+  }
+  70% {
+    scale: 0.9;
+    translate: -2px;
+  }
+  100% {
+    scale: 1.1;
+    translate: 2px;
+  }
+}
+
+@keyframes scale {
+  to {
+    scale: 1.1;
+  }
+}
