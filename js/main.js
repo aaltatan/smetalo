@@ -102,3 +102,27 @@ spans.forEach((span) => {
   });
 });
 // End trending
+// Start Stats
+let nums = document.querySelectorAll(".stats-container .card .nums");
+let section = document.querySelector(".stats .stats-container");
+let started = false;
+
+window.onscroll = () => {
+  if (window.scrollY >= section.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
+function startCount(el) {
+  let goal = el.dataset.val;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (+el.textContent >= goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+// End Stats
