@@ -1,9 +1,14 @@
 @use "../SASS/keyframes" as *;
+
+/***************** Reset ****************/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/***************** Colors ****************/
 
 :root {
   --orange: #f05a2b;
@@ -13,6 +18,8 @@
   --white: #ffffff;
   --dark-gray: #5b5b5b;
 }
+
+/***************** Scrollbar ****************/
 
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -26,6 +33,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/***************** Body ****************/
+
 body {
   font-family: "DynaPuff", cursive;
   background-image: linear-gradient(#5b5b5b 1px, transparent 1px),
@@ -35,7 +44,8 @@ body {
   color: var(--white);
 }
 
-// Start Games
+/***************** Quizz Container ****************/
+
 .addtion-game {
   position: fixed;
   top: -200%;
@@ -107,14 +117,14 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.5rem;
-      @media (max-width: 767px) and (orientation: landscape) {
+      @media (max-height: 500px) and (orientation: landscape) {
         grid-template-columns: repeat(6, 1fr);
       }
       > span {
         padding: 0.5rem 1rem;
         width: 60px;
         aspect-ratio: 1/1;
-        @media (max-width: 767px) and (orientation: landscape) {
+        @media (max-height: 500px) and (orientation: landscape) {
           width: 40px;
           font-size: 1.25rem;
         }
@@ -126,7 +136,7 @@ body {
         transition-duration: 300ms;
         &.clear {
           background-color: red;
-          @media (max-width: 767px) and (orientation: landscape) {
+          @media (max-height: 500px) and (orientation: landscape) {
             order: 12;
           }
         }
@@ -140,9 +150,8 @@ body {
     }
   }
 }
-// End Games
 
-// Start Componnents
+/***************** Components ****************/
 
 .logo {
   display: flex;
@@ -310,7 +319,7 @@ body {
     right: 0;
     width: 100%;
     height: 30px;
-    z-index: 1000;
+    z-index: 1;
     background-image: linear-gradient(
         135deg,
         var(--orange) 25%,
@@ -363,8 +372,8 @@ body {
   }
 }
 
-// End Componnents
-// Start Header
+/***************** Header ****************/
+
 header {
   position: fixed;
   left: 0;
@@ -465,13 +474,15 @@ header {
     }
   }
 }
-// End Header
+
+/***************** Main Section ****************/
+
 main {
   margin-bottom: 3rem;
   > div {
     scroll-margin: 1rem;
   }
-  // Start Landing
+  /***************** Landing ****************/
   .landing {
     position: relative;
     height: calc(100vh);
@@ -564,8 +575,7 @@ main {
       }
     }
   }
-  // End Landing
-  // Start Channels
+  /***************** Channels ****************/
   .channels {
     .channels-container {
       display: grid;
@@ -578,6 +588,17 @@ main {
         overflow: hidden;
         border: 4px dashed var(--orange);
         cursor: pointer;
+        &:nth-child(even) {
+          &::before {
+            content: "New";
+            position: absolute;
+            left: -2rem;
+            top: 1rem;
+            transform: rotate(-45deg);
+            padding: 0.25rem 3rem;
+            background-color: var(--orange);
+          }
+        }
         &:hover {
           &::after {
             opacity: 1;
@@ -621,8 +642,7 @@ main {
       }
     }
   }
-  // End Channels
-  // Start Trendings
+  /***************** Trendings ****************/
   .trending {
     .trending-container {
       margin-bottom: 1rem;
@@ -706,8 +726,7 @@ main {
       }
     }
   }
-  // End Trendings
-  // Start News
+  /***************** News ****************/
   .news {
     .news-container {
       span {
@@ -796,8 +815,7 @@ main {
       }
     }
   }
-  // End News
-  // Start Quizzes
+  /***************** Quizzes ****************/
   .quizzes {
     .quiz-container {
       display: grid;
@@ -824,8 +842,7 @@ main {
       }
     }
   }
-  // End Quizzes
-  // Start Stats
+  /***************** Statics ****************/
   .stats {
     .stats-container {
       display: grid;
@@ -857,11 +874,9 @@ main {
       }
     }
   }
-  // End Stats
 }
-// -----------------
 $social: ((youtube, #ff0000) (twitter, #1da1f2) (facebook, #4267b2));
-// -----------------
+/***************** Footer ****************/
 footer.footer {
   background-color: black;
   .container {

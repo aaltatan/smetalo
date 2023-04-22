@@ -26,8 +26,16 @@ divideGameLink.addEventListener("click", () => {
 });
 
 gameXBtn.addEventListener("click", () => {
+  // Close Navbar when click x button on keyboard
   game.style.top = "-200%";
 });
+
+document.onkeyup = (e) => {
+  // Close Navbar when pressing Escape on keyboard
+  if (e.key === "Escape") {
+    game.style.top = "-120%";
+  }
+};
 
 let numpadNums = document.querySelectorAll(".addtion-game .numpad > span");
 let resultTag = document.querySelector(".addtion-game .body .result");
