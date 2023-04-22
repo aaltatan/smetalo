@@ -38,7 +38,7 @@ body {
 // Start Games
 .addtion-game {
   position: fixed;
-  top: -120%;
+  top: -200%;
   left: 0;
   z-index: 10000;
   height: 100dvh;
@@ -57,15 +57,14 @@ body {
     user-select: none;
     transition-duration: 300ms;
     &:hover {
-      scale: 1.1;
-      rotate: 45deg;
+      transform: scale(1.1) rotate(45deg);
     }
   }
   .game-container {
     position: absolute;
     left: 50%;
     top: 50%;
-    translate: -50% -50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +92,8 @@ body {
         display: block;
         padding: 0.5rem 1rem;
         width: fit-content;
+        min-width: 60px;
+        min-height: 75px;
         border-radius: 1rem;
         box-shadow: 2px 2px 0 1px var(--white) inset;
         background-color: var(--light-blue);
@@ -106,10 +107,17 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.5rem;
+      @media (max-width: 767px) and (orientation: landscape) {
+        grid-template-columns: repeat(6, 1fr);
+      }
       > span {
         padding: 0.5rem 1rem;
         width: 60px;
         aspect-ratio: 1/1;
+        @media (max-width: 767px) and (orientation: landscape) {
+          width: 40px;
+          font-size: 1.25rem;
+        }
         border-radius: 1rem;
         box-shadow: 2px 2px 0 1px var(--white);
         background-color: var(--orange);
@@ -118,6 +126,9 @@ body {
         transition-duration: 300ms;
         &.clear {
           background-color: red;
+          @media (max-width: 767px) and (orientation: landscape) {
+            order: 12;
+          }
         }
         &:last-of-type {
           background-color: lime;
@@ -153,7 +164,7 @@ body {
   .letter-1 {
     > span {
       top: 50%;
-      translate: -40% -60%;
+      transform: translate(-40%, -60%);
       aspect-ratio: 1/1;
       border-radius: 50%;
       background: var(--blue);
@@ -165,7 +176,7 @@ body {
       position: absolute;
       left: 50%;
       top: 50%;
-      translate: -60% -40%;
+      transform: translate(-60%, -40%);
       width: 80%;
       aspect-ratio: 1/1;
       border-radius: 50%;
@@ -177,7 +188,7 @@ body {
   .letter-2 {
     > span {
       top: 50%;
-      translate: -50% -50%;
+      transform: translate(-50%, -50%);
       aspect-ratio: 1/1;
       background-color: var(--orange);
       clip-path: polygon(50% 35%, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -187,7 +198,7 @@ body {
   .letter-3 {
     > span {
       top: 25%;
-      translate: -50%;
+      transform: translate(-50%);
       height: 20%;
       background-color: var(--white);
       animation: logo-letter-3 1s infinite ease;
@@ -197,7 +208,7 @@ body {
       position: absolute;
       left: 50%;
       top: 60%;
-      translate: -50%;
+      transform: translate(-50%);
       width: 80%;
       height: 20%;
       background-color: var(--light-blue);
@@ -207,7 +218,7 @@ body {
   .letter-4 {
     > span {
       top: 50%;
-      translate: -50% -50%;
+      transform: translate(-50%, -50%);
       aspect-ratio: 1/1;
       background-color: var(--orange);
       clip-path: polygon(
@@ -226,7 +237,7 @@ body {
   .letter-5 {
     > span {
       top: 50%;
-      translate: -50% -50%;
+      transform: translate(-50%, -50%);
       aspect-ratio: 1/1;
       background-color: var(--blue);
       clip-path: polygon(50% 0, 100% 100%, 0 100%);
@@ -236,7 +247,7 @@ body {
   .letter-6 {
     > span {
       top: 50%;
-      translate: -40% -50%;
+      transform: translate(-40%, -50%);
       aspect-ratio: 1/1;
       background-color: var(--white);
       clip-path: polygon(0 0, 30% 0, 30% 70%, 80% 70%, 80% 100%, 0 100%);
@@ -246,7 +257,7 @@ body {
   .letter-7 {
     > span {
       top: 50%;
-      translate: -50% -50%;
+      transform: translate(-50%, -50%);
       aspect-ratio: 1/1;
       border-radius: 50%;
       background-color: var(--orange);
@@ -279,7 +290,7 @@ body {
     width: 15px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
-    rotate: 45deg;
+    transform: rotate(45deg);
     transition-duration: 300ms;
   }
   &:hover {
@@ -441,8 +452,7 @@ header {
         cursor: pointer;
         transition-duration: 300ms;
         &:hover {
-          rotate: 7deg;
-          scale: 1.1;
+          transform: rotate(7deg) scale(1.1);
         }
       }
       > li {
@@ -458,6 +468,9 @@ header {
 // End Header
 main {
   margin-bottom: 1rem;
+  > div {
+    scroll-margin: 1rem;
+  }
   // Start Landing
   .landing {
     position: relative;
@@ -496,7 +509,7 @@ main {
           position: absolute;
           left: 50%;
           top: 50%;
-          translate: -50% -50%;
+          transform: translate(-50%, -50%);
           > h1 {
             padding: 1rem;
             text-align: center;
@@ -508,7 +521,7 @@ main {
       position: absolute;
       left: 50%;
       bottom: 1rem;
-      translate: -50% 0;
+      transform: translate(-50%, 0);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -556,7 +569,7 @@ main {
   .channels {
     .channels-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
       gap: 1rem;
       margin-bottom: 1rem;
       .channel-card {
@@ -570,8 +583,7 @@ main {
             opacity: 1;
           }
           > img {
-            scale: 1.1;
-            rotate: 3deg;
+            transform: scale(1.1) rotate(3deg);
           }
           .text {
             bottom: 3rem;
@@ -599,7 +611,7 @@ main {
           left: 50%;
           bottom: -10rem;
           z-index: 10;
-          translate: -50% 0;
+          transform: translate(-50%, 0);
           transition-duration: 300ms;
           text-align: center;
           > h3 {
@@ -682,7 +694,7 @@ main {
             position: absolute;
             left: 50%;
             top: 50%;
-            translate: -50% -50%;
+            transform: translate(-50%, -50%);
             z-index: 10;
             > i {
               color: var(--orange);
@@ -789,7 +801,7 @@ main {
   .quizzes {
     .quiz-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
       gap: 1rem;
       text-align: center;
       .quiz-card {
