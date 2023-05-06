@@ -111,6 +111,9 @@ body {
         box-shadow: 2px 2px 0 1px var(--white) inset;
         background-color: var(--light-blue);
         font-size: 3rem;
+        @media (max-width: 767px) {
+          font-size: 2rem;
+        }
       }
       i {
         font-size: 2rem;
@@ -611,7 +614,7 @@ main {
             transform: scale(1.1) rotate(3deg);
           }
           .text {
-            bottom: 3rem;
+            bottom: 15%;
           }
         }
         &::after {
