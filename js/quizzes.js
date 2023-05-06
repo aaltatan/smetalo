@@ -61,10 +61,10 @@ numpadNums.forEach((num) => {
         .innerHTML;
       let title = document
         .querySelector(".addtion-game .heading > h3")
-        .innerHTML.split(" ")[0]
+        .innerHTML.split(" ")[1]
         .toLowerCase();
       switch (title) {
-        case "addtion":
+        case "الجمع":
           if (num1 + num2 === parseInt(resultTag.innerHTML)) {
             resultTag.classList.add("correct");
           } else {
@@ -74,7 +74,7 @@ numpadNums.forEach((num) => {
             generateNums();
           }, 2000);
           break;
-        case "substract":
+        case "الطرح":
           if (num1 - num2 === parseInt(resultTag.innerHTML)) {
             resultTag.classList.add("correct");
           } else {
@@ -84,7 +84,7 @@ numpadNums.forEach((num) => {
             generateNumsMinus();
           }, 2000);
           break;
-        case "times":
+        case "الضرب":
           if (num1 * num2 === parseInt(resultTag.innerHTML)) {
             resultTag.classList.add("correct");
           } else {
@@ -94,7 +94,7 @@ numpadNums.forEach((num) => {
             generateNumsTimes();
           }, 2000);
           break;
-        case "divide":
+        case "القسمة":
           if (num1 / num2 === parseInt(resultTag.innerHTML)) {
             resultTag.classList.add("correct");
           } else {
@@ -121,7 +121,7 @@ function generateNums() {
     .querySelector(".addtion-game .body > i:first-of-type")
     .classList.add("fa", "fa-plus-circle");
   document.querySelector(".addtion-game .heading > h3").innerHTML =
-    "Addtion Quiz";
+    "اختبار الجمع";
   resultTag.classList.remove("correct");
   resultTag.classList.remove("not-correct");
 }
@@ -138,7 +138,7 @@ function generateNumsMinus() {
     .querySelector(".addtion-game .body > i:first-of-type")
     .classList.add("fa", "fa-minus-circle");
   document.querySelector(".addtion-game .heading > h3").innerHTML =
-    "Substract Quiz";
+    "اختبار الطرح";
   resultTag.classList.remove("correct");
   resultTag.classList.remove("not-correct");
 }
@@ -155,7 +155,7 @@ function generateNumsTimes() {
     .querySelector(".addtion-game .body > i:first-of-type")
     .classList.add("fa", "fa-times-circle");
   document.querySelector(".addtion-game .heading > h3").innerHTML =
-    "Times Quiz";
+    "اختبار الضرب";
   resultTag.classList.remove("correct");
   resultTag.classList.remove("not-correct");
 }
@@ -174,7 +174,7 @@ function generateNumsDivide() {
     .querySelector(".addtion-game .body > i:first-of-type")
     .classList.add("fa", "fa-divide");
   document.querySelector(".addtion-game .heading > h3").innerHTML =
-    "Divide Quiz";
+    "اختبار القسمة";
   resultTag.classList.remove("correct");
   resultTag.classList.remove("not-correct");
 }
