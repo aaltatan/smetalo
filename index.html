@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Marhey:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo+Play&family=Marhey:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <!-- End Google Fonts -->
@@ -80,7 +80,7 @@
           <span class="letter-7"><span></span></span>
         </div>
         <div class="text">
-          <p>منصة تعليمية للأطفال</p>
+          <p>منصة تواصل اجتماعي للاطفال</p>
         </div>
       </div>
       <div class="burger"><span></span><span></span><span></span></div>
@@ -88,6 +88,7 @@
         <li><a class="link-btn" href="#channels">القنوات</a></li>
         <li><a class="link-btn" href="#trending">جديدنا</a></li>
         <li><a class="link-btn" href="#news">الاخبار</a></li>
+        <li><a class="link-btn" href="#quran">القرأن الكريم</a></li>
         <li><a class="link-btn" href="#quizzes">الاختبارات</a></li>
         <span>&times;</span>
       </ul>
@@ -130,10 +131,25 @@
           </div>
           <div class="video-card">
             <div class="image">
-              <img src="./imgs/landing-03.jpg" alt="" />
+              <img src="./imgs/unnamed.png" alt="" />
             </div>
             <div class="text">
-              <h1>الرياضيات من الصفر الى الاحتراف</h1>
+              <h1>ألعاب تعليمية</h1>
+              <a
+                class="link-btn"
+                href="https://www.youtube.com/playlist?list=PLDjdqMOCSWxsAo-92DZE9N87UfPxvVZkA"
+                target="_blank"
+              >
+                <i class="fa fa-play-circle"></i> مشاهدة القائمة
+              </a>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="image">
+              <img src="./imgs/landing-02.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h1>تعليم ابتدائي</h1>
               <a
                 class="link-btn"
                 href="https://www.youtube.com/playlist?list=PLE44uIuOm4dTsu3onka4pm8YKYF-JijNI"
@@ -180,10 +196,33 @@
           <li data-num="3"></li>
           <li data-num="4"></li>
           <li data-num="5"></li>
+          <li data-num="6"></li>
         </ul>
         <a href="#channels" class="go-down"><i class="fa fa-arrow-down"></i></a>
       </div>
       <!-- End Landing -->
+      <!-- Start Player -->
+      <div class="player">
+        <div class="special-heading">
+          <h2>مشغل الفيديو</h2>
+          <p>نتمنى المتعة في المشاهدة</p>
+        </div>
+        <div class="container">
+          <div class="play-list"></div>
+          <div class="video">
+            <iframe
+              width="853"
+              height="480"
+              src="https://www.youtube.com/embed/o43ZteVMQHQ"
+              title="كليب الأرقام - numbers |  قناة مرح - marah tv"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- End Player -->
       <!-- Start Channels -->
       <div class="channels" id="channels">
         <div class="special-heading">
@@ -269,7 +308,7 @@
               <span class="All active" data-cat=".card">الكل</span>
               <span class="this-month" data-cat=".one">اللغة العربية</span>
               <span class="last-month" data-cat=".two">اللغة الانكليزية</span>
-              <!-- <span class="older" data-cat=".three">Older</span> -->
+              <span class="last-month" data-cat=".Games">ألعاب</span>
             </div>
             <div class="cards">
               <div class="card one">
@@ -368,6 +407,78 @@
                   </a>
                 </div>
               </div>
+              <div class="card one">
+                <img src="./imgs/maxresdefault.jpg" alt="" />
+                <div class="text">
+                  <a
+                    href="https://youtu.be/VEzvA8yWQMU"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> الاحرف الهجائية
+                  </a>
+                </div>
+              </div>
+              <div class="card one">
+                <img src="./imgs/images.png" alt="" />
+                <div class="text">
+                  <a
+                    href="https://youtu.be/wCTr_MHBxx8"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> الأشكال الهندسية
+                  </a>
+                </div>
+              </div>
+              <div class="card Games">
+                <img src="./imgs/games2.jpg" alt="" />
+                <div class="text">
+                  <a
+                    href="https://wordwall.net/ar/resource/27368819"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> العنصر المطابق
+                  </a>
+                </div>
+              </div>
+              <div class="card Games">
+                <img src="./imgs/images.png" alt="" />
+                <div class="text">
+                  <a
+                    href="https://wordwall.net/ar/resource/4748737"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> معرفة الأشكال الهندسية
+                  </a>
+                </div>
+              </div>
+              <div class="card Games">
+                <img src="./imgs/gems.jpg" alt="" />
+                <div class="text">
+                  <a
+                    href="https://wordwall.net/ar/resource/10788433"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> ترتيب الاحرف
+                  </a>
+                </div>
+              </div>
+              <div class="card Games">
+                <img src="./imgs/maxresdefault (1).jpg" alt="" />
+                <div class="text">
+                  <a
+                    href="https://wordwall.net/ar/resource/17595169"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> احرف الجر
+                  </a>
+                </div>
+              </div>
               <div class="card two">
                 <img src="./imgs/trending-09.jpg" alt="" />
                 <div class="text">
@@ -429,6 +540,30 @@
                 </div>
               </div>
               <div class="card two">
+                <img src="./imgs/images.png" alt="" />
+                <div class="text">
+                  <a
+                    href="https://youtu.be/oTUZMj7simU"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> geometric shapes
+                  </a>
+                </div>
+              </div>
+              <div class="card two">
+                <img src="./imgs/imge1.jpg" alt="" />
+                <div class="text">
+                  <a
+                    href="https://youtu.be/5PKXLilDGuE"
+                    target="_blank"
+                    class="link-btn"
+                  >
+                    <i class="fa fa-play"></i> English alphabet
+                  </a>
+                </div>
+              </div>
+              <div class="card two">
                 <img src="./imgs/trending-07.jpg" alt="" />
                 <div class="text">
                   <a
@@ -454,10 +589,51 @@
               </div>
             </div>
           </div>
-          <a href="#" class="link-btn">شاهد قائمة فيديوهاتنا</a>
         </div>
       </div>
+      <a href="#" class="link-btn">شاهد قائمة فيديوهاتنا</a>
       <!-- End Trending -->
+      <!-- Start Quran -->
+      <div class="quran" id="quran">
+        <div class="special-heading">
+          <h2>القرآن الكريم</h2>
+          <p>اقرأ باسم ربك الذي خلق</p>
+        </div>
+        <div class="container">
+          <section class="sec-1">
+            <div class="aya">
+              <p>بسم الله الرحمن الرحيم</p>
+              <p>
+                قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِنْ شَرِّ ما خَلَقَ (2)
+                وَمِنْ شَرِّ غاسِقٍ إِذا وَقَبَ (3) وَمِنْ شَرِّ النَّفَّاثاتِ
+                فِي الْعُقَدِ (4) ومِنْ شَرِّ حاسِدٍ إِذا حَسَدَ (5)
+              </p>
+              <p>صدق الله العظيم</p>
+            </div>
+          </section>
+          <section class="sec-2">
+            <div class="aya">
+              <p>بسم الله الرحمن الرحيم</p>
+              <p>
+                إِنَّا أَعْطَيْناكَ الْكَوْثَرَ (1) فَصَلِّ لِرَبِّكَ وَانْحَرْ
+                (2) إِنَّ شانِئَكَ هُوَ الْأَبْتَرُ (3)
+              </p>
+              <p>صدق الله العظيم</p>
+            </div>
+            <div class="aya">
+              <p>بسم الله الرحمن الرحيم</p>
+              <p>
+                قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ
+                وَلَمْ يُولَدْ (3) وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ (4)
+              </p>
+              <p>صدق الله العظيم</p>
+            </div>
+          </section>
+        </div>
+        <br />
+        <a href="#" class="link-btn">اقرأ المزيد من السور</a>
+      </div>
+      <!-- End Quran -->
       <!-- Start News -->
       <div class="news" id="news">
         <div class="special-heading">
